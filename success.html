@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="success.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">   
+        <img src="./assets/images/icon-success.svg" alt="">
+        <h1>Thanks for subscribing!</h1>
+        <p class="mainText">
+            A confimation email has been sent to <b id="cfmEmail"></b> please open it and click the button inside to confirm your subscription.
+        </p>
+        <p class="button">
+            Dismiss message
+        </p>        
+    </div>
+    
+</body>
+<script>
+    const storedEmail = localStorage.getItem('userEmail');
+    const cnfrmEmail = document.getElementById('cfmEmail');
+    console.log(storedEmail);
+    cnfrmEmail.innerText = storedEmail;
+</script>
+</html>
